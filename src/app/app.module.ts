@@ -1,26 +1,22 @@
+import { ShareModule } from './user/share/share.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { ShareComponent } from './user/share/share.component';
-import { HeaderComponent } from './user/share/header/header.component';
-import { FooterComponent } from './user/share/footer/footer.component';
-import { BannerComponent } from './user/share/banner/banner.component';
-import { MainComponent } from './main/main.component';
-
+import {Routes, RouterModule} from '@angular/router';
+import { from } from 'rxjs';
+const appreouter : Routes =[
+  {
+    path:'',
+    loadChildren:()=>import('./user/main/main.module').then((m)=>m.MainModule)
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    ShareComponent,
-    HeaderComponent,
-    FooterComponent,
-    BannerComponent,
-    MainComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appreouter)
   ],
   providers: [],
   bootstrap: [AppComponent]

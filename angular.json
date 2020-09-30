@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "WebBook"
+    }
+  },
+  "defaultProject": "WebBook",
+  "cli": {
+    "analytics": "c7b7cc2c-c11e-45a8-ba2c-d58cd8ce2834"
+  }
 }
