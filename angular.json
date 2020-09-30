@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "WebBook"
+    }
+  },
+  "defaultProject": "WebBook",
+  "cli": {
+    "analytics": "43635052-8563-4ade-9539-c0b67c10a69f"
+  }
 }
