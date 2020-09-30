@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,10 +123,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "WebBook",
-  "cli": {
-    "analytics": "43635052-8563-4ade-9539-c0b67c10a69f"
-  }
+    }},
+  "defaultProject": "WebBook"
 }
