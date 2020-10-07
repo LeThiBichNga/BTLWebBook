@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 
 
 
+
+
 @NgModule({
   declarations: [BannerComponent,FooterComponent,HeaderComponent],
   imports: [

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {Routes, RouterModule} from '@angular/router';
 import { from } from 'rxjs';
+
 const appreouter : Routes =[
   {
     path:'',
@@ -13,6 +14,7 @@ const appreouter : Routes =[
 @NgModule({
   declarations: [
     AppComponent,
+    
   ],
   imports: [
     BrowserModule,
