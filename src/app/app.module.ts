@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ShareModule } from './user/share/share.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,8 @@ const appreouter : Routes =[
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appreouter)
+    RouterModule.forRoot(appreouter),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
