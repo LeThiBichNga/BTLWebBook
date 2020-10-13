@@ -15,7 +15,7 @@ export class BodyComponent extends BaseComponent implements OnInit {
 
   constructor(private injector: Injector, private http: HttpClient) { 
     super(injector)
-  }
+  }t
   itemnew: any;
   newnew:any;
   ngOnInit(): void {

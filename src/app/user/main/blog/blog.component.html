@@ -1,0 +1,59 @@
+<div class="banner-wrapper has_background">
+    <img src="../../../../assets/images/banner7.jpg"
+         class="img-responsive attachment-1920x447 size-1920x447" alt="img">
+    <div class="banner-wrapper-inner">
+        <h1 class="page-title">Tin tức</h1>
+        <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+            <ul class="trail-items breadcrumb">
+                <li class="trail-item trail-begin"><a href="index.html"><span>Trang chủ</span></a></li>
+                <li class="trail-item trail-end active"><span>Tin tức</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main-container no-sidebar">
+    <!-- POST LAYOUT -->
+    <div class="container">
+        <div class="row">
+            <div class="main-content col-md-12 col-sm-12">
+                <div class="blog-standard content-post">
+                    <ng-container *ngFor="let it of tt">
+                        <article
+                            class="post-item post-standard post-195 post type-post status-publish format-standard has-post-thumbnail hentry category-light category-table category-life-style tag-light tag-life-style">
+                        <div class="post-thumb">
+                            <a href="#"><img
+                                src="../../../../assets/images/tintuc/{{it.hinhanh}}"
+                                    class="img-responsive attachment-1170x768 size-1170x768" alt="img" style="width: 1500px; height: 500px;"></a></div>
+                        <div class="post-info">
+                            <h2 class="post-title"><a href="#">{{it.tieude}}</a></h2>
+                            <div class="post-meta">
+                                <div class="date">
+                                    <a href="#">
+                                        {{it.ngaydang | date : 'dd/MM/yyyy'}} </a>
+                                </div>
+                                <div class="post-author">
+                                    By:<a href="#">
+                                    admin </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            {{it.tomtat}}
+                        </div>
+                        <a href="#" class="readmore">Read
+                            more</a>
+                    </article>
+                    </ng-container>
+                </div>
+                <nav class="navigation pagination">
+                    <div class="nav-links">
+                        <span class="page-numbers current">1</span>
+                        <a class="page-numbers" href="#">2</a>
+                        <a class="next page-numbers" href="#"><i class="fa fa-angle-right"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
