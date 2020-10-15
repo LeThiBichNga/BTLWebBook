@@ -6,13 +6,11 @@
                     <li id="menu-item-864"
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-864"><a
                             class="kreen-menu-item-title" title="Store Direction"
-                            href="#"><span class="icon flaticon-localization"></span>Store
-                        Direction</a></li>
+                            href="#"><span class="icon flaticon-localization"></span>Kimdongbookhanoi@gmail.com</a></li>
                     <li id="menu-item-865"
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-865"><a
                             class="kreen-menu-item-title" title="Order Tracking"
-                            href="#"><span class="icon flaticon-box"></span>Order
-                        Tracking</a></li>
+                            href="#"><span class="icon flaticon-box"></span>Theo dõi đơn</a></li>
                 </ul>
                 <div class="kreen-nav top-bar-menu right">
                     <ul class="wpml-menu">
@@ -204,29 +202,20 @@
                                 <ng-container *ngFor="let it of item">
                                     <li id="menu-item-230"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
-                                        <a class="kreen-menu-item-title" title="Home" href="#">{{it.tendm}}</a>
-                                        <span class="toggle-submenu"></span>                                  
+                                        <a class="kreen-menu-item-title" title="Home" href="#" [routerLink] = "[it.url]">{{it.tendm}}</a>                                       
+                                        <span class="toggle-submenu"></span>  
+                                        <ng-container *ngFor="let itldm of itemldm">                                        
+                                            <ul role="menu" class="submenu" *ngIf="it.madm == itldm.madm?true:false" >    
+                                                <ng-container *ngFor="let itldm of itemldm">                  
+                                                    <li *ngIf="it.madm == itldm.madm?true:false" id="menu-item-987"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-987">
+                                                        <a class="kreen-menu-item-title" title="About"
+                                                        href="#" [routerLink] = "['sanpham',itldm.maloai]">{{itldm.tenloai}}</a></li>   
+                                                </ng-container>                                         
+                                            </ul>  
+                                        </ng-container>                  
                                     </li>
-                                </ng-container>
-                                <li id="menu-item-237"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-237 parent">
-                                    <a class="kreen-menu-item-title" title="Pages" href="#">Pages</a>
-                                    <span class="toggle-submenu"></span>
-                                    <ul role="menu" class="submenu">
-                                        <li id="menu-item-987"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-987">
-                                            <a class="kreen-menu-item-title" title="About"
-                                               href="about.html">About</a></li>
-                                        <li id="menu-item-988"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-988">
-                                            <a class="kreen-menu-item-title" title="Contact"
-                                               href="contact.html">Contact</a></li>
-                                        <li id="menu-item-990"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-990">
-                                            <a class="kreen-menu-item-title" title="Page 404"
-                                               href="404.html">Page 404</a></li>
-                                    </ul>
-                                </li>
+                                </ng-container>  
                             </ul>
                         </div>
                     </div>

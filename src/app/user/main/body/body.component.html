@@ -80,7 +80,7 @@
                                         <div class="product-inner tooltip-left">
                                             <div class="product-thumb">
                                                 <a class="thumb-link"
-                                                   href="#">
+                                                   href="#" [routerLink] = "['/chitietsanpham',itn.masp]">
                                                     <img class="img-responsive"
                                                          src="../../../../assets/images/sanpham/{{itn.anh}}"
                                                          alt="Green beans" width="270" height="350">
@@ -106,7 +106,7 @@
                                             </div>
                                             <div class="product-info equal-elem">
                                                 <h3 class="product-name product_title">
-                                                    <a href="#">{{itn.tensp}}</a>
+                                                    <a href="#"[routerLink] = "['/chitietsanpham',itn.masp]">{{itn.tensp}}</a>
                                                 </h3>
                                                 <div class="rating-wapper nostar">
                                                     <div class="star-rating"><span style="width:0%">Rated <strong
@@ -906,10 +906,9 @@
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
                                 
-                                <a href="#" tabindex="0">
+                                <a href="#"  tabindex="0" [routerLink] = "['/chitiettintuc',ttn.matt]">
                                     <img src="../../../../assets/images/tintuc/{{ttn.hinhanh}}"
-                                         class="img-responsive attachment-370x330 size-370x330" alt="img"
-                                         width="370" height="330"> 
+                                         class="img-responsive attachment-370x330 size-370x330"alt="img" style="width: 500px; height: 300px;"> 
                                 </a>
                                 <a class="datebox" href="#" tabindex="0">
                                     <span>{{ttn.ngaydang|date:'dd'}}</span>
@@ -929,7 +928,7 @@
                                     </div>
                                 </div>
                                 <div class="post-info equal-elem"  >
-                                    <h2 class="post-title"><a href="#" tabindex="0">{{ttn.tieude}}</a></h2>
+                                    <h2 class="post-title"><a href="#" tabindex="0" [routerLink] = "['/chitiettintuc',ttn.matt]">{{ttn.tieude}}</a></h2>
                                     {{ttn.tomtat}}
                                 </div>
                             </div>

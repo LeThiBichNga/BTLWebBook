@@ -3,7 +3,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,7 +11,8 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [BannerComponent,FooterComponent,HeaderComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[
     BannerComponent,FooterComponent,HeaderComponent

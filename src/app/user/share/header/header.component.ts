@@ -12,10 +12,18 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     super(injector)
   }
   item: any;
+  itemldm:any;
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
       this._api.get('api/danhmuc/get_all_danh_muc').subscribe(res =>{
         this.item = res;
+        console.log(this.item);
+        setTimeout(()=>{
+          this.loadScripts();
+        })
+      })
+      this._api.get('api/Loaisanpham/get_loai_san_pham').subscribe(res=>{
+        this.itemldm = res;
         setTimeout(()=>{
           this.loadScripts();
         })
