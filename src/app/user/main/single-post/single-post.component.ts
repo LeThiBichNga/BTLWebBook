@@ -17,8 +17,9 @@ export class SinglePostComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     this._router.params.subscribe(params=>{
       let id = params["id"];
-      this._http.get("https://localhost:44374/api/tintuc/get-chitiettintuc-by-id/"+id).subscribe(res=>{
+      this._http.get("https://localhost:44374/api/tintuc/get_chitiettintuc_by_id/"+id).subscribe(res=>{
         this.ctt = res;
+        console.log(this.ctt);
           setTimeout(()=>{
             this.loadScripts();
           })

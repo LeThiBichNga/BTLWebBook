@@ -44,6 +44,10 @@ const appreouter : Routes =[
         component: SingleProductComponent
       },
       {
+        path:'chitiettintuc/:id',
+        component: SinglePostComponent
+      },
+      {
         path:'giohang',
         component: ShoppingcartComponent
       }
