@@ -13,6 +13,9 @@ export class HeaderComponent extends BaseComponent implements OnInit {
   }
   item: any;
   itemldm:any;
+  itemcart:any;
+  totalprice:any;
+  totalproduce:any;
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
       this._api.get('api/danhmuc/get_all_danh_muc').subscribe(res =>{
@@ -29,6 +32,18 @@ export class HeaderComponent extends BaseComponent implements OnInit {
         })
       })
     })
+    this._cart.items.subscribe(res=>{
+      this.itemcart = res;
+      this.totalprice = 0;
+      this.totalproduce = 0;
+      for(let i of res){
+        this.totalproduce += 1;
+        this.totalprice = this.totalprice + i.soluong*i.gia;
+      }
+    })
   }
-
+  deleteCart(id){
+    this._cart.deleteItem(id);
+    alert("Xóa thành công")
+  }
 }

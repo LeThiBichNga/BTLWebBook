@@ -1,0 +1,100 @@
+<div class="banner-wrapper has_background">
+    <img src="assets/images/banner-for-all2.jpg"
+         class="img-responsive attachment-1920x447 size-1920x447" alt="img">
+    <div class="banner-wrapper-inner">
+        <h1 class="page-title">Cart</h1>
+        <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+            <ul class="trail-items breadcrumb">
+                <li class="trail-item trail-begin"><a href="index.html"><span>Home</span></a></li>
+                <li class="trail-item trail-end active"><span>Cart</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<main class="site-main main-container no-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="main-content col-md-12">
+                <div class="page-main-content">
+                    <div class="kreen">
+                        <div class="kreen-notices-wrapper"></div>
+                        <form class="kreen-cart-form">
+                            <table class="shop_table shop_table_responsive cart kreen-cart-form__contents"
+                                   cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th class="product-remove">&nbsp;</th>
+                                    <th class="product-thumbnail">&nbsp;</th>
+                                    <th class="product-name">Sản phẩm</th>
+                                    <th class="product-price">Giá</th>
+                                    <th class="product-quantity">Số lượng</th>
+                                </tr>
+                                </thead>
+                                <tbody *ngIf="items.length >0">
+                                <ng-container *ngFor="let sp of items">
+                                    <tr class="kreen-cart-form__cart-item cart_item">
+                                        <td class="product-remove">
+                                            <a href="javascript:void(0)" (click)="deleteCart(sp.masp)"
+                                               class="remove" aria-label="Remove this item" data-product_id="27"
+                                               data-product_sku="885B712">×</a></td>
+                                        <td class="product-thumbnail">
+                                            <a href="#"><img
+                                                    src="../../../../assets/images/sanpham/{{sp.anh}}"
+                                                    class="attachment-kreen_thumbnail size-kreen_thumbnail"
+                                                    alt="img" width="600" height="778"></a></td>
+                                        <td class="product-name" data-title="Product">
+                                            <a href="#">{{sp.tensp}}</a></td>
+                                        <td class="product-price" data-title="Price">
+                                            <span class="kreen-Price-amount amount"><span
+                                                    class="kreen-Price-currencySymbol"></span>{{sp.gia}}</span> VNĐ</td>
+                                        <td class="product-quantity" data-title="Quantity">
+                                            <div class="quantity">
+                                                <span class="qty-label">Số lượng:</span>
+                                                <div class="control">
+                                                    <input type="text"
+                                                           value="{{sp.soluong}}" #soluong (change)="addQty(sp, soluong.value)" title="Qty" class="input-qty input-text qty text">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </ng-container>                                
+                                </tbody>
+                                <tbody *ngIf="items.length ==0">
+                                    <ng-container>
+                                        <tr class="kreen-cart-form__cart-item cart_item">
+                                            <td colspan="5" style="text-align: center;">
+                                                Giỏ hàng rỗng
+                                            </td>
+                                        </tr>
+                                    </ng-container>                                
+                                    </tbody>
+                            </table>
+                        </form>
+                        <div class="cart-collaterals">
+                            <div class="cart_totals ">
+                                <h2></h2>
+                                <table class="shop_table shop_table_responsive" cellspacing="0">
+                                    <tbody>
+                                    <tr class="order-total">
+                                        <th>Tổng giá</th>
+                                        <td data-title="Total"><strong><span
+                                                class="kreen-Price-amount amount"><span
+                                                class="kreen-Price-currencySymbol"></span>{{total}}</span>VNĐ</strong>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="kreen-proceed-to-checkout">
+                                    <a href="#"
+                                       class="checkout-button button alt kreen-forward">
+                                        Proceed to checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

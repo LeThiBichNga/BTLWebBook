@@ -12,6 +12,7 @@ import { ContantComponent } from './contant/contant.component';
 import { IntroduceComponent } from './introduce/introduce.component';
 import { AllproductComponent } from './allproduct/allproduct.component';
 import { SinglePostComponent } from './single-post/single-post.component';
+import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 
 const appreouter : Routes =[
   {
@@ -41,6 +42,10 @@ const appreouter : Routes =[
       {
         path:'chitietsanpham/:id',
         component: SingleProductComponent
+      },
+      {
+        path:'giohang',
+        component: ShoppingcartComponent
       }
     ]
   }
@@ -48,7 +53,7 @@ const appreouter : Routes =[
 
 
 @NgModule({
-  declarations: [MainComponent, BodyComponent, ProductComponent, BlogComponent, SingleProductComponent, ContantComponent, IntroduceComponent, AllproductComponent, SinglePostComponent],
+  declarations: [MainComponent, BodyComponent, ProductComponent, BlogComponent, SingleProductComponent, ContantComponent, IntroduceComponent, AllproductComponent, SinglePostComponent, ShoppingcartComponent],
   imports: [
     CommonModule,
     ShareModule,

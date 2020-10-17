@@ -35,4 +35,9 @@ export class BodyComponent extends BaseComponent implements OnInit {
       })
     })     
   }
+  addcart(value){
+    console.log(value);
+    this._cart.addToCart(value);
+    alert("Thêm thành công");
+  }
 }
