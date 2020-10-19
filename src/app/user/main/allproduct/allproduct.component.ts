@@ -19,6 +19,9 @@ export class AllproductComponent extends BaseComponent implements OnInit {
       this._api.get("api/sanpham/get_san_pham").subscribe(res=>{
         this.allitem = res;
         console.log(res);
+        setTimeout(()=>{
+          this.loadScripts();
+        })
       })
     })
   }

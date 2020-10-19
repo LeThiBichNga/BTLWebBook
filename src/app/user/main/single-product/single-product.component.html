@@ -33,7 +33,7 @@
                                     <span class="onnew"><span class="text">Mới</span></span></div>
                                 <h1 class="product_title entry-title">{{ct.tensp}}</h1>
                                 <p class="price"><span class="kreen-Price-amount amount"><span
-                                        class="kreen-Price-currencySymbol">Giá: </span>{{ct.gia}}</span> VND
+                                        class="kreen-Price-currencySymbol">Giá: </span>{{ ct.gia.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</span>
                                 <p class="stock in-stock">
                                     Tác giả: <span> {{ct.tacgia}}</span>
                                 </p>
@@ -190,7 +190,7 @@
             <div class="owl-slick owl-products equal-container better-height"
                      data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;slidesToShow&quot;:4}"
                      data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
-                    <ng-container *ngFor="let ctl of ctlq">
+                    <!-- <ng-container *ngFor="let ctl of ctlq">
                         <div class="product-item style-01 post-27 product type-product status-publish has-post-thumbnail product_cat-table product_cat-new-arrivals product_cat-lamp product_tag-table product_tag-sock  instock shipping-taxable purchasable product-type-variable has-default-attributes ">
                         
                             <div class="product-inner tooltip-left">
@@ -232,9 +232,47 @@
                             </div>
                         
                         </div>
-                </ng-container>
+                    </ng-container> -->
+                    
                 </div>
             </div>
+            <div class="container">
+                <div class="row">
+                    <ng-container *ngFor="let ctl of ctlq">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid7">
+                                <div class="product-image7">
+                                    <a href="#">
+                                        <img class="pic-1" src="../../../../assets/images/sanpham/{{ctl.anh}}"
+                                        alt="Cherry tomato" style="width: 600px; height: 350px;">
+                                        <img class="pic-2" src="../../../../assets/images/sanpham/{{ctl.anh}}"
+                                        alt="Cherry tomato" style="width: 600px; height: 350px;">
+                                    </a>
+                                    <ul class="social">
+                                        <li><a href="" class="fa fa-search"></a></li>
+                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="#">{{ctl.tensp}}</a></h3>
+                                    <ul class="rating">
+                                        <li class="fa fa-star"></li>
+                                        <li class="fa fa-star"></li>
+                                        <li class="fa fa-star"></li>
+                                        <li class="fa fa-star"></li>
+                                        <li class="fa fa-star"></li>
+                                    </ul>
+                                    <div class="price">{{ ctl.gia.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}
+                                        <!-- <span>$20.00</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <hr>
         </div>
     </div>
 </div>

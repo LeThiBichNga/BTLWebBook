@@ -106,7 +106,7 @@
                                                             class="rating">0</strong> out of 5</span></div>
                                                     <span class="review">(0)</span></div>
                                                 <span class="price"><span class="kreen-Price-amount amount"><span
-                                                        class="kreen-Price-currencySymbol"></span>{{itn.gia}}</span></span>
+                                                        class="kreen-Price-currencySymbol"></span>{{ itn.gia.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</span></span>
                                             </div>
                                         </div>
                                     </div>
@@ -889,7 +889,7 @@
                 </div>
             </div>
             <div class="kreen-blog style-01">
-                <ng-container>
+                <!-- <ng-container>
                     <div class="blog-list-owl owl-slick equal-container better-height"
                      data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:3,&quot;rows&quot;:1}"
                      data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
@@ -930,7 +930,30 @@
                     </ng-container>
                     
                 </div>
-                </ng-container>
+                </ng-container> -->
+                <section class="details-card">
+                    <div class="container">
+                        <div class="row">
+                            <ng-container *ngFor="let ttn of newnew">
+                            <div class="col-md-4">
+                                <div class="card-content">
+                                    <div class="card-img">
+                                        <img src="../../../../assets/images/tintuc/{{ttn.hinhanh}}"
+                                         class="img-responsive attachment-370x330 size-370x330"alt="img" style="width: 400px; height: 250px;"> 
+                                        <!-- <span><h4>heading</h4></span> -->
+                                    </div>
+                                    <div class="card-desc">
+                                        <h2 class="post-title"><a title="{{ttn.tieude}}" href="#" tabindex="0" [routerLink] = "['/chitiettintuc',ttn.matt]">{{ttn.tieude.split(" ").length>10?splittieude(ttn.tieude):ttn.tieude}}</a></h2>
+                                        <div style="height: 130px;">{{ttn.tomtat}}</div>
+                                            <a href="#"  class="btn-card" [routerLink] = "['/chitiettintuc',ttn.matt]">Xem thêm</a>   
+                                    </div>
+                                </div>
+                            </div>
+                            </ng-container>
+                            
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>

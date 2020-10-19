@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {Routes, RouterModule} from '@angular/router';
 import { from } from 'rxjs';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './admin/login/login.component';
 
 
 const appreouter : Routes =[
@@ -16,6 +18,8 @@ const appreouter : Routes =[
 @NgModule({
   declarations: [
     AppComponent,
+    AdminComponent,
+    LoginComponent,
   
     
   ],

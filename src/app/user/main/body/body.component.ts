@@ -13,7 +13,7 @@ import { BaseComponent } from 'src/app/lib/base-component';
 })
 export class BodyComponent extends BaseComponent implements OnInit {
 
-  constructor(private injector: Injector, private http: HttpClient) { 
+  constructor(private injector: Injector, private http: HttpClient, private Injector:Injector) { 
     super(injector)
   }t
   itemnew: any;
@@ -39,5 +39,14 @@ export class BodyComponent extends BaseComponent implements OnInit {
     console.log(value);
     this._cart.addToCart(value);
     alert("Thêm thành công");
+  }
+  splittieude(tieude){
+    var ds = tieude.split(" ");
+    var str ="";
+    console.log(ds);
+    for(var i=0;i<=6;i++){
+      str = str + " " + ds[i];
+    }
+    return str+ " ..."
   }
 }

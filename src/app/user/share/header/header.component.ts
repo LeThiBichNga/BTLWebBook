@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { BaseComponent } from './../../../lib/base-component';
 import { Component, OnInit, Injector } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit, Injector } from '@angular/core';
 })
 export class HeaderComponent extends BaseComponent implements OnInit {
 
-  constructor(private injector :Injector) { 
+  constructor(private injector :Injector, private _rou: Router) { 
     super(injector)
   }
   item: any;
@@ -45,5 +46,8 @@ export class HeaderComponent extends BaseComponent implements OnInit {
   deleteCart(id){
     this._cart.deleteItem(id);
     alert("Xóa thành công")
+  }
+  onsearch(value){
+    this._rou.navigate(["/timkiem",value])
   }
 }

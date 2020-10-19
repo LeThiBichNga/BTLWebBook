@@ -72,8 +72,8 @@
                                   class="form-search block-search-form kreen-live-search-form">
                                 <div class="form-content search-box results-search">
                                     <div class="inner">
-                                        <input autocomplete="off" class="searchfield txt-livesearch input" name="s"
-                                               value="" placeholder="Search here..." type="text">
+                                        <input autocomplete="off" #search class="searchfield txt-livesearch input" name="s"
+                                               value="" placeholder="Tìm kiếm" type="text">
                                     </div>
                                 </div>
                                 <input name="post_type" value="product" type="hidden">
@@ -93,7 +93,7 @@
                                         <option class="level-0" value="sofas">Cauliflower</option>
                                     </select> -->
                                 </div>
-                                <button type="submit" class="btn-submit">
+                                <button type="button" (click)="onsearch(search.value)" class="btn-submit">
                                     <span class="pe-7s-search"></span>
                                 </button>
                             </form><!-- block search -->

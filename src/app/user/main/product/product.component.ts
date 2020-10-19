@@ -20,6 +20,9 @@ export class ProductComponent extends BaseComponent implements OnInit {
       this._api.get("api/sanpham/get_san_pham_by_iddm/" + iddm).subscribe(res=>{
         this.item = res;
         console.log(res);
+        setTimeout(()=>{
+          this.loadScripts();
+        })
       })
     })
   }
