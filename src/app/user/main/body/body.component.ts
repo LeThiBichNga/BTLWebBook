@@ -43,8 +43,15 @@ export class BodyComponent extends BaseComponent implements OnInit {
   splittieude(tieude){
     var ds = tieude.split(" ");
     var str ="";
-    console.log(ds);
     for(var i=0;i<=6;i++){
+      str = str + " " + ds[i];
+    }
+    return str+ " ..."
+  }
+  splittensp(tesp){
+    var ds = tesp.split(" ");
+    var str ="";
+    for(var i=0;i<=3;i++){
       str = str + " " + ds[i];
     }
     return str+ " ..."

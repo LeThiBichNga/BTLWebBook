@@ -30,7 +30,8 @@
                     </div>
                     <div class="post-content">
                         <div id="output">
-                            <p>{{ctt.noidung}}</p>
+                            <p [innerHtml]='ctt.noidung'></p>
+                         
                         </div>
                         <p>&nbsp;</p>
                         <div id="gallery-1" class="gallery galleryid-195 gallery-columns-2 gallery-size-full">
@@ -42,7 +43,7 @@
                 </article>
                 <div id="comments" class="comments-area">
                     <div id="respond" class="comment-respond">
-                        <h3 id="reply-title" class="comment-reply-title">Để lại bình luận</h3>
+                        <h2 id="reply-title" class="comment-reply-title">Để lại bình luận</h2>
                         <form id="commentform" class="comment-form">
                             <p class="comment-notes"><span
                                     id="email-notes">email của bạn sẽ không được xuất bản.</span>  Các trường bắt buộc được đánh dấu  <span class="required">*</span></p>

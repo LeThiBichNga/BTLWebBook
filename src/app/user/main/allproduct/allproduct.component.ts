@@ -25,5 +25,12 @@ export class AllproductComponent extends BaseComponent implements OnInit {
       })
     })
   }
-
+  splittensp(tesp){
+    var ds = tesp.split(" ");
+    var str ="";
+    for(var i=0;i<=3;i++){
+      str = str + " " + ds[i];
+    }
+    return str+ " ..."
+  }
 }

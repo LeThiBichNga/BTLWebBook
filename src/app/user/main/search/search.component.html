@@ -161,11 +161,14 @@
                 </div>
                 <div class="shop-control shop-after-control">
                     <nav class="kreen-pagination">
-                        <span class="page-numbers current">1</span>
+                        <!-- <span class="page-numbers current">1</span>
                         <a class="page-numbers" href="#">2</a>
-                        <a class="next page-numbers" href="#">Next</a>
+                        <a class="next page-numbers" href="#">Next</a> -->
+                        <ng-container *ngFor="let i of listtotal">
+                            <a class="page-numbers" (click)="changepaize(i)" href="javascript:void(0)">{{i}}</a>
+                        </ng-container>
                     </nav>
-                    <p class="kreen-result-count">Showing 1–12 of 20 results</p>
+                    <!-- <p class="kreen-result-count">Showing 1–12 of 20 results</p> -->
                 </div>
             </div>
         </div>

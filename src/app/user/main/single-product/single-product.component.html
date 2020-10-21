@@ -116,7 +116,7 @@
                             <div class="container-table">
                                 <div class="container-cell">
                                     <h2 class="az_custom_heading">{{ct.tensp}}<br></h2>
-                                    <p>{{ct.mota}}</p>
+                                    <p [innerHtml]='ct.mota'></p>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +130,7 @@
                                 <div id="review_form_wrapper">
                                     <div id="review_form">
                                         <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Hãy là người đầu tiên nhận xét</span>
+                                            <span id="reply-title" class="comment-reply-title"><h2 >Hãy là người đầu tiên nhận xét</h2></span>
                                             <form id="commentform" class="comment-form">
                                                 <p class="comment-notes"><span id="email-notes">Email của bạn sẽ không được xuất bản. Các trường bắt buộc được đánh dấu *.</span>
                                                    Phần không thể bỏ trống <span class="required">*</span></p>

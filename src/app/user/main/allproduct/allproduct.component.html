@@ -79,16 +79,16 @@
                         <ng-container *ngFor="let ait of allitem">
                             <li class="product-item wow fadeInUp product-item rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-ts-6 style-01 post-24 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
-                            <div class="product-inner tooltip-left">
+                            <div class="product-inner tooltip-left" >
                                 <div class="product-thumb">
-                                    <a class="thumb-link" href="#"[routerLink] = "['/chitietsanpham',ait.masp]">
+                                    <a class="thumb-link"  href="#"[routerLink] = "['/chitietsanpham',ait.masp]">
                                         <img class="img-responsive"
                                              src="../../../../assets/images/sanpham/{{ait.anh}}"
                                              alt="Cherry tomato" style="width: 600px; height: 350px;">
                                     </a>
-                                    <div class="flash">
+                                    <!-- <div class="flash">
                                         <span class="onnew"><span class="text">New</span></span></div>
-                                    <!-- <form class="variations_form cart">
+                                     <form class="variations_form cart">
                                         <table class="variations">
                                             <tbody>
                                             <tr>
@@ -98,27 +98,21 @@
                                             </tr>
                                             </tbody>
                                         </table>
-                                    </form> -->
-                                    <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick View</a>
+                                    </form>  -->
+                                    <!-- <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick View</a> -->
                                     <div class="group-button">
-                                        <div class="yith-wcwl-add-to-wishlist">
-                                            <div class="yith-wcwl-add-button show">
-                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                            </div>
-                                        </div>
                                         <div class="kreen product compare-button">
-                                            <a href="#" class="compare button">Compare</a>
+                                            <a href="#" class="compare button">đối chiếu</a>
                                         </div>
-                                        <a href="#" class="button yith-wcqv-button">Quick View</a>
+                                        <a href="#" class="button yith-wcqv-button">xem chi tiết</a>
                                         <div class="add-to-cart">
-                                            <a href="#" class="button product_type_variable add_to_cart_button">Select
-                                                options</a>
+                                            <a href="#" class="button product_type_variable add_to_cart_button">Thêm vào giỏ hàng</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="#"[routerLink] = "['/chitietsanpham',ait.masp]">{{ait.tensp}}</a>
+                                        <a href="#" title="{{ait.tensp}}" [routerLink] = "['/chitietsanpham',ait.masp]">{{ait.tensp.split(" ").length<=5?ait.tensp:splittensp(ait.tensp)}}</a>
                                     </h3>
                                     <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
@@ -139,18 +133,12 @@
                                 </div>
                                 <div class="group-button">
                                     <div class="group-button-inner">
-                                        <div class="yith-wcwl-add-to-wishlist">
-                                            <div class="yith-wcwl-add-button show">
-                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                            </div>
-                                        </div>
                                         <div class="kreen product compare-button">
-                                            <a href="#" class="compare button">Compare</a>
+                                            <a href="#" class="compare button">Đối chiếu</a>
                                         </div>
-                                        <a href="#" class="button yith-wcqv-button">Quick View</a>
+                                        <a href="#" class="button yith-wcqv-button">Xem chi tiết</a>
                                         <div class="add-to-cart">
-                                            <a href="#" class="button product_type_variable add_to_cart_button">Select
-                                                options</a>
+                                            <a href="#" class="button product_type_variable add_to_cart_button">Thêm vào giỏ hàng</a>
                                         </div>
                                     </div>
                                 </div>
@@ -163,9 +151,9 @@
                     <nav class="kreen-pagination">
                         <span class="page-numbers current">1</span>
                         <a class="page-numbers" href="#">2</a>
-                        <a class="next page-numbers" href="#">Next</a>
+                        <a class="next page-numbers" href="#">Tiếp</a>
                     </nav>
-                    <p class="kreen-result-count">Showing 1–12 of 20 results</p>
+                    <p class="kreen-result-count">Hiển thị 1-20</p>
                 </div>
             </div>
         </div>

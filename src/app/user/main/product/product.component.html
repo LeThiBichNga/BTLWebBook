@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="#"[routerLink] = "['/chitietsanpham',it.masp]">{{it.tensp}}</a>
+                                        <a href="#"[routerLink] = "['/chitietsanpham',it.masp]">{{it.tensp.split(" ").length<=5?it.tensp:splittensp(it.tensp)}}</a>
                                     </h3>
                                     <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong

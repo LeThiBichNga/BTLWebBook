@@ -89,9 +89,9 @@
                                                     <span class="onnew"><span class="text">New</span></span></div>
                                                 <div class="group-button">
                                                     <div class="kreen product compare-button">
-                                                        <a href="#" class="compare button">Compare</a>
+                                                        <a href="#" class="compare button">Đối chiếu</a>
                                                     </div>
-                                                    <a href="#" class="button yith-wcqv-button">Quick View</a>
+                                                    <a href="#" class="button yith-wcqv-button" [routerLink] = "['/chitietsanpham',itn.masp]">Xem chi tiết</a>
                                                     <div class="add-to-cart">
                                                         <a href="javascript:void(0)" (click)="addcart(itn)" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Thêm vào giỏ hàng</a>
                                                     </div>
@@ -99,7 +99,7 @@
                                             </div>
                                             <div class="product-info equal-elem">
                                                 <h3 class="product-name product_title">
-                                                    <a href="#"[routerLink] = "['/chitietsanpham',itn.masp]">{{itn.tensp}}</a>
+                                                    <a href="#" title="{{itn.tensp}}" tabindex="0"[routerLink] = "['/chitietsanpham',itn.masp]">{{itn.tensp.split(" ").length<=5?itn.tensp:splittensp(itn.tensp)}}</a>
                                                 </h3>
                                                 <div class="rating-wapper nostar">
                                                     <div class="star-rating"><span style="width:0%">Rated <strong
@@ -816,7 +816,7 @@
                                 <div class="product-item featured_products style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-25 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-specials product_tag-light product_tag-sock last instock sale featured shipping-taxable purchasable product-type-simple">
                                     <div class="product-inner tooltip-left">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
+                                            <!-- <a class="thumb-link"
                                                href="#">
                                                 <img class="img-responsive"
                                                      src="assets/images/apro151-1-270x350.jpg"
@@ -824,21 +824,15 @@
                                             </a>
                                             <div class="flash">
                                                 <span class="onsale"><span class="number">-11%</span></span>
-                                                <span class="onnew"><span class="text">New</span></span></div>
+                                                <span class="onnew"><span class="text">New</span></span></div> -->
                                             <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
                                                 <div class="kreen product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
+                                                    <a href="#" class="compare button">Đối chiếu</a>
                                                 </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
+                                                <a href="#" class="button yith-wcqv-button">Xem chi tiết</a>
                                                 <div class="add-to-cart">
                                                     <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add
-                                                        to cart</a>
+                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Thêm giỏ hàng</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -958,4 +952,6 @@
         </div>
     </div>
   
+    
+
 </div>
