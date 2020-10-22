@@ -1,5 +1,5 @@
 <div class="banner-wrapper has_background">
-    <img src="assets/images/banner-for-all2.jpg"
+    <img src="../../../../assets/images/banner7.jpg"
          class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner">
         <h1 class="page-title">Giỏ hàng</h1>
@@ -47,7 +47,7 @@
                                             <a href="#">{{sp.tensp}}</a></td>
                                         <td class="product-price" data-title="Price">
                                             <span class="kreen-Price-amount amount"><span
-                                                    class="kreen-Price-currencySymbol"></span>{{sp.gia}}</span> VNĐ</td>
+                                                    class="kreen-Price-currencySymbol"></span>{{ sp.gia.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</span></td>
                                         <td class="product-quantity" data-title="Quantity">
                                             <div class="quantity">
                                                 <span class="qty-label">Số lượng:</span>
@@ -80,7 +80,7 @@
                                         <th>Tổng giá</th>
                                         <td data-title="Total"><strong><span
                                                 class="kreen-Price-amount amount"><span
-                                                class="kreen-Price-currencySymbol"></span>{{total}}</span>VNĐ</strong>
+                                                class="kreen-Price-currencySymbol"></span>{{ total.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</span></strong>
                                         </td>
                                     </tr>
                                     </tbody>

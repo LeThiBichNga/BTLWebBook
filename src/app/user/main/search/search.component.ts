@@ -26,10 +26,6 @@ export class SearchComponent extends BaseComponent implements OnInit {
       this._api.post('api/sanpham/get_san_pham_search', { page: this.page, pageSize: this.pageSize, search: search}).subscribe(res => {
       this.item = res.data;
       this.totalItems = res.totalItems;
-      var nava = parseInt((this.totalItems / this.pageSize).toFixed());
-      for(var i = 1;i<=nava;i++){
-        this.listtotal.push(i);  
-      }
       }, err => { });       
     });
   }
@@ -41,5 +37,14 @@ export class SearchComponent extends BaseComponent implements OnInit {
       console.log(this.item);
       this.totalItems = res.totalItems;
     });
+  }
+  phantrang(){
+    var listtotal = [];
+    var nava = parseInt((this.totalItems / this.pageSize).toFixed());
+      // lấy tổng số sp chia cho 1 trang r lấy nguyên lên kết quả day, toFixed: làm tròn lên
+    for(var i = 1;i<=nava;i++){
+      listtotal.push(i);  
+    }
+    return listtotal;
   }
 }

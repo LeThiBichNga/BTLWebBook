@@ -8654,7 +8654,7 @@ body.kreen-cart .shop_table tr th.product-subtotal {
 	font-weight: 500;
 	color: #fff;
 	background-color: #80b82d;
-	padding: 25px;
+	padding: 10px;
 	margin: 0;
 	border-radius: 6px 6px 0 0;
 }
@@ -8726,10 +8726,10 @@ body.kreen-cart .shop_table tr th.product-subtotal {
 }
 .kreen-proceed-to-checkout .checkout-button {
 	display: block;
-	background-color: #000;
+	background-color: #343a40;
 	height: 60px;
 	line-height: 60px;
-	font-size: 18px;
+	font-size: 15px;
 	font-weight: 600;
 	color: #fff;
 	border-radius: 0 0 6px 6px;

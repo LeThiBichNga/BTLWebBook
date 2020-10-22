@@ -1,1 +1,24 @@
-<router-outlet></router-outlet>
+<div id="wrapper">
+    <!-- Sidebar -->
+    <app-headera></app-headera>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <app-navbar></app-navbar>
+        <!-- Topbar -->
+
+        <!-- Container Fluid-->
+        <router-outlet></router-outlet>
+        <!---Container Fluid-->
+      </div>
+      <!-- Footer -->
+      <app-footera></app-footera>
+      <!-- Footer -->
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>

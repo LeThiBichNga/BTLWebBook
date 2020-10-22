@@ -140,13 +140,13 @@
                                                     </a>
                                                     <span class="quantity">{{sp.soluong}} × <span
                                                             class="kreen-Price-amount amount"><span
-                                                            class="kreen-Price-currencySymbol"></span>{{sp.gia}}</span>VNĐ</span>
+                                                            class="kreen-Price-currencySymbol"></span>{{ sp.gia.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</span></span>
                                                 </li>
                                             </ng-container>
                                         </ul>
                                         <p class="kreen-mini-cart__total total"><strong>Tổng:</strong>
                                             <span class="kreen-Price-amount amount"><span
-                                                    class="kreen-Price-currencySymbol"></span>{{totalprice}} VNĐ</span>
+                                                    class="kreen-Price-currencySymbol"></span>{{ totalprice.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</span>
                                         </p>
                                         <p class="kreen-mini-cart__buttons buttons">
                                             <a href="cart.html" class="button kreen-forward" [routerLink] = "['/giohang'] ">Giỏ hàng</a>

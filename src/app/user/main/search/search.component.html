@@ -164,7 +164,7 @@
                         <!-- <span class="page-numbers current">1</span>
                         <a class="page-numbers" href="#">2</a>
                         <a class="next page-numbers" href="#">Next</a> -->
-                        <ng-container *ngFor="let i of listtotal">
+                        <ng-container *ngFor="let i of phantrang()">
                             <a class="page-numbers" (click)="changepaize(i)" href="javascript:void(0)">{{i}}</a>
                         </ng-container>
                     </nav>
