@@ -67,9 +67,16 @@ export class CartService {
     let local_storage = JSON.parse(localStorage.getItem('cart'));
     return local_storage.length;
   }
-
+  totalIntem(){
+    let local_storage = JSON.parse(localStorage.getItem('cart'));
+    var s = 0;
+    local_storage.forEach(element => {
+      s = s + element.soluong * element.gia;
+    });
+    return s;
+  }
   clearCart() {
-   localStorage.clear();
+   localStorage.removeItem('cart');
    this.itemsSubject.next(null);
   }
 }

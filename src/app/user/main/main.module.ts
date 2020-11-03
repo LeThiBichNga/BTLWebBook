@@ -14,6 +14,7 @@ import { AllproductComponent } from './allproduct/allproduct.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 import { SearchComponent } from './search/search.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const appreouter : Routes =[
   {
@@ -55,6 +56,10 @@ const appreouter : Routes =[
       {
         path: 'timkiem/:txtsearch',
         component: SearchComponent
+      },
+      {
+        path: 'dathang',
+        component: CheckoutComponent
       }
     ]
   }
@@ -62,7 +67,7 @@ const appreouter : Routes =[
 
 
 @NgModule({
-  declarations: [MainComponent, BodyComponent, ProductComponent, BlogComponent, SingleProductComponent, ContantComponent, IntroduceComponent, AllproductComponent, SinglePostComponent, ShoppingcartComponent, SearchComponent],
+  declarations: [MainComponent, BodyComponent, ProductComponent, BlogComponent, SingleProductComponent, ContantComponent, IntroduceComponent, AllproductComponent, SinglePostComponent, ShoppingcartComponent, SearchComponent, CheckoutComponent],
   imports: [
     CommonModule,
     ShareModule,

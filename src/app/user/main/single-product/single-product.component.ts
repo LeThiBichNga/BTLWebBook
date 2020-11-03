@@ -16,6 +16,7 @@ export class SingleProductComponent extends BaseComponent implements OnInit {
   ctlq:any;
   ngOnInit(): void {
     this._router.params.subscribe(params=>{
+      window.scroll(0,0);
       let id = params["id"];
       this._http.get("https://localhost:44374/api/sanpham/get-by-id/"+id).subscribe(res=>{
         this.ct = res;

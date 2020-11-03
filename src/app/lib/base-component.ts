@@ -18,7 +18,7 @@ export class BaseComponent {
    public loadScripts() {
         
          this.renderExternalScript("assets/js/functions.js").onload = () => {}
-         
+         this.renderExternalScript("https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js").onload = () => {}
        }
    public renderExternalScript(src: string): HTMLScriptElement {
          const script = document.createElement('script');

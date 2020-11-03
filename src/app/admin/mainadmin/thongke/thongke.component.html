@@ -92,7 +92,47 @@
 <div class="col-xl-8 col-lg-7 mb-4">
   <div class="card">
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-      <h6 class="m-0 font-weight-bold text-primary">Đơn hàng</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Sản phẩm tồn kho</h6>
+      <a class="m-0 float-right btn btn-danger btn-sm" href="#">Xem thêm <i
+          class="fas fa-chevron-right"></i></a>
+    </div>
+    <div class="table-responsive">
+      <table   class="table align-items-center table-flush">
+        <thead class="thead-light">
+          <tr>
+            <th>Tên sản phẩm</th>
+            <th>Tác giả</th>
+            <th>Gía</th>
+            <th>Số lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="tonkho.length != 0">
+            <tr *ngFor="let it of pageOfItems">
+              <td><a href="#">{{it.tensp}}</a></td>
+              <td>{{it.tacgia}}</td>
+              <td>{{it.gia}}</td>
+              <td>{{it.soluong}}</td>
+            </tr>
+            <tr>
+              <td colspan="4" style="margin: auto;">
+                <jw-pagination [items]="tonkho" (changePage)="onChangePage($event)"></jw-pagination>
+              </td>
+            </tr>
+          </ng-container>     
+          <ng-container *ngIf="tonkho.length == 0">
+            <tr>
+              <td colspan="4" class="text-center">Danh sách rỗng</td>
+            </tr>
+          </ng-container>     
+        </tbody>
+        </table>
+    </div>
+    <div class="card-footer"></div>
+  </div>
+  <div class="card">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h6 class="m-0 font-weight-bold text-primary">Sản phẩm hết</h6>
       <a class="m-0 float-right btn btn-danger btn-sm" href="#">Xem thêm <i
           class="fas fa-chevron-right"></i></a>
     </div>
@@ -100,49 +140,57 @@
       <table class="table align-items-center table-flush">
         <thead class="thead-light">
           <tr>
-            <th>ID đơn hàng</th>
-            <th>Khách hàng</th>
-            <th>Sản phẩm</th>
-            <th>	Trạng thái</th>
-            <th>Hoạt động</th>
+            <th>Tên sản phẩm</th>
+            <th>Tác giả</th>
+            <th>Gía</th>
+            <th>Số lượng</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><a href="#">RA0449</a></td>
-            <td>Udin Wayang</td>
-            <td>Nasi Padang</td>
-            <td><span class="badge badge-success">Delivered</span></td>
-            <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+          <tr *ngFor="let it of het">
+            <td><a href="#">{{it.tensp}}</a></td>
+            <td>{{it.tacgia}}</td>
+            <td>{{it.gia}}</td>
+            <td>{{it.soluong}}</td>
           </tr>
+          <ng-container *ngIf="het.length == 0">
+            <tr>
+              <td colspan="4" class="text-center">Danh sách rỗng</td>
+            </tr>
+          </ng-container>   
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer"></div>
+  </div>
+  <div class="card">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h6 class="m-0 font-weight-bold text-primary">Sản phẩm sắp hết</h6>
+      <a class="m-0 float-right btn btn-danger btn-sm" href="#">Xem thêm <i
+          class="fas fa-chevron-right"></i></a>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-items-center table-flush">
+        <thead class="thead-light">
           <tr>
-            <td><a href="#">RA5324</a></td>
-            <td>Jaenab Bajigur</td>
-            <td>Gundam 90' Edition</td>
-            <td><span class="badge badge-warning">Shipping</span></td>
-            <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+            <th>Tên sản phẩm</th>
+            <th>Tác giả</th>
+            <th>Gía</th>
+            <th>Số lượng</th>
           </tr>
-          <tr>
-            <td><a href="#">RA8568</a></td>
-            <td>Rivat Mahesa</td>
-            <td>Oblong T-Shirt</td>
-            <td><span class="badge badge-danger">Pending</span></td>
-            <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+        </thead>
+        <tbody>
+          <tr *ngFor="let it of saphet">
+            <td><a href="#">{{it.tensp}}</a></td>
+            <td>{{it.tacgia}}</td>
+            <td>{{it.gia}}</td>
+            <td>{{it.soluong}}</td>
           </tr>
-          <tr>
-            <td><a href="#">RA1453</a></td>
-            <td>Indri Junanda</td>
-            <td>Hat Rounded</td>
-            <td><span class="badge badge-info">Processing</span></td>
-            <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-          </tr>
-          <tr>
-            <td><a href="#">RA1998</a></td>
-            <td>Udin Cilok</td>
-            <td>Baby Powder</td>
-            <td><span class="badge badge-success">Delivered</span></td>
-            <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-          </tr>
+          <ng-container *ngIf="saphet.length == 0">
+            <tr>
+              <td colspan="4" class="text-center">Danh sách rỗng</td>
+            </tr>
+          </ng-container> 
         </tbody>
       </table>
     </div>

@@ -19,6 +19,7 @@ export class BodyComponent extends BaseComponent implements OnInit {
   itemnew: any;
   newnew:any;
   ngOnInit(): void {
+    window.scroll(0,0);
     this._route.params.subscribe(params=>{
       console.log("hello admin");
       this.http.get("https://localhost:44374/api/sanpham/get_sanpham_new").subscribe(res=>{

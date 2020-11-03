@@ -1,92 +1,130 @@
-
 <!-- Container Fluid-->
 <div class="container-fluid" id="container-wrapper">
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-      <h1 class="h3 mb-0 text-gray-800">Sản phẩm</h1>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="./">Trang chủ</a></li>
-        <li class="breadcrumb-item">Sản phẩm</li>
-      </ol>
-    </div>
-
-    <!-- Row -->
-    <div class="row">
-      <!-- Datatables -->
-      <div class="col-lg-12">
-        <div class="card mb-4">
-          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Sản phẩm</h6>
+  <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" type="button">Thêm sản phẩm</button>
+  </div> -->
+  <!-- Modal -->
+  <div class="modal fade" style="margin-top: 400px;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thông tin sản phẩm</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Tên sản phẩm</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
           </div>
-          <div class="table-responsive p-3">
-            <table class="table align-items-center table-flush" id="dataTable">
-              <thead class="thead-light">
-                <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>Edinburgh</td>
-                  <td>61</td>
-                  <td>2011/04/25</td>
-                  <td>$320,800</td>
-                </tr>
-               
-              </tbody>
-            </table>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Tên tác giả</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
           </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Giá</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Số lượng</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Hình ảnh</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+          <button type="button" class="btn btn-primary">Lưu</button>
         </div>
       </div>
     </div>
-    <!--Row-->
-
-    <!-- Documentation Link -->
-    <div class="row">
-      <div class="col-lg-12">
-        <p>DataTables is a third party plugin that is used to generate the demo table below. For more information
-          about DataTables, please visit the official <a href="https://datatables.net/" target="_blank">DataTables
-            documentation.</a></p>
-      </div>
-    </div>
-
-    <!-- Modal Logout -->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Are you sure you want to logout?</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-            <a href="login.html" class="btn btn-primary">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
-  <!---Container Fluid-->
+  <!-- Row -->
+  <div class="row">
+    <!-- Datatables -->
+    <div class="col-lg-12">
+      <div class="card mb-4">
+        <div class="row card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <div class="col-10">
+            <h6 class="m-0 font-weight-bold text-primary">Quản lý sản phẩm</h6>
+          </div>
+          <div class="col-2">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" type="button">Thêm sản phẩm</button>
+          </div>
+        </div>
+        <div class="table-responsive p-3">
+          <table class="table align-items-center table-flush" id="dataTable">
+            <thead class="thead-light">
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!--Row-->
+
+  <!-- Documentation Link -->
+  <div class="row">
+    <div class="col-lg-12">
+      <p>DataTables is a third party plugin that is used to generate the demo table below. For more information
+        about DataTables, please visit the official <a href="https://datatables.net/" target="_blank">DataTables
+          documentation.</a></p>
+    </div>
+  </div>
+
+  <!-- Modal Logout -->
+  <div class="modal fade" style="margin-top: 400px;" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to logout?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+          <a href="login.html" class="btn btn-primary">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!---Container Fluid-->
