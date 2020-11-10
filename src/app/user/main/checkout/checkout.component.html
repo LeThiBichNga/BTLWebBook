@@ -1,3 +1,17 @@
+<div class="banner-wrapper has_background">
+    <img src="../../../../assets/images/banner7.jpg"
+         class="img-responsive attachment-1920x447 size-1920x447" alt="img">
+    <div class="banner-wrapper-inner">
+        <h1 class="page-title">Đặt hàng</h1>
+        <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+            <ul class="trail-items breadcrumb">
+                <li class="trail-item trail-begin"><a href="index.html"><span>Trang chủ</span></a></li>
+                <li class="trail-item trail-end active"><span>Đặt hàng</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 <main class="site-main  main-container no-sidebar">
     <div class="container">
         <div class="row">
@@ -9,9 +23,9 @@
                             <div class="kreen-checkout-login">
                                 <div class="kreen-form-login-toggle kreen-form-toggle">
                                     <div class="kreen-info">
-                                        Returning customer? <a href="#" class="showlogin showbtn">Click here to login</a></div>
+                                        Phản hồi của khách hàng <a href="#" class="showlogin showbtn">Nhấn để đăng nhập</a></div>
                                 </div>
-                                <form class="kreen-form kreen-form-login login kreen-form-show" method="post"
+                                <!-- <form class="kreen-form kreen-form-login login kreen-form-show" method="post"
                                       style="display:none;">
                                     <p>If you have shopped with us before, please enter your details below. If you are a
                                         new customer, please proceed to the Billing &amp; Shipping section.</p>
@@ -43,16 +57,16 @@
                                             password?</a>
                                     </p>
                                     <div class="clear"></div>
-                                </form>
+                                </form> -->
                             </div>
                             <div class="kreen-checkout-coupon">
                                 <div class="kreen-notices-wrapper"></div>
                                 <div class="kreen-form-coupon-toggle kreen-form-toggle">
                                     <div class="kreen-info">
-                                        Have a coupon? <a href="#" class="showcoupon showbtn">Click here to enter your code</a>
+                                        Ưu đãi <a href="#" class="showcoupon showbtn">Nhấn để xem</a>
                                     </div>
                                 </div>
-                                <form class="checkout_coupon kreen-form-coupon kreen-form-show" method="post"
+                                <!-- <form class="checkout_coupon kreen-form-coupon kreen-form-show" method="post"
                                       style="display:none">
                                     <p>If you have a coupon code, please apply it below.</p>
                                     <p class="form-row form-row-first">
@@ -65,7 +79,7 @@
                                         </button>
                                     </p>
                                     <div class="clear"></div>
-                                </form>
+                                </form> -->
                             </div>
                         </div>
                         <form name="checkout" method="post" class="checkout kreen-checkout"
@@ -123,7 +137,7 @@
                                 <input type="hidden" name="lang" value="en">
                                 <div id="payment" class="kreen-checkout-payment">
                                     <button type="button" (click) = "checkout(hoten.value,noigiao.value,sdt.value,cart)" class="button alt" name="kreen_checkout_place_order"
-                                                id="place_order" value="Place order" data-value="Place order">Place
+                                                id="place_order" value="Place order" data-value="Place order">
                                         Đặt hàng
                                     </button>
                                 </div>

@@ -104,9 +104,9 @@
                                         <div class="kreen product compare-button">
                                             <a href="#" class="compare button">đối chiếu</a>
                                         </div>
-                                        <a href="#" class="button yith-wcqv-button">xem chi tiết</a>
+                                        <a href="#" class="button yith-wcqv-button" [routerLink] = "['/chitietsanpham',ait.masp]">xem chi tiết</a>
                                         <div class="add-to-cart">
-                                            <a href="#" class="button product_type_variable add_to_cart_button">Thêm vào giỏ hàng</a>
+                                            <a href="javascript:void(0)" (click)="addcart(ait)" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Thêm vào giỏ hàng</a>
                                         </div>
                                     </div>
                                 </div>

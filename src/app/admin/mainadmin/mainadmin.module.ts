@@ -10,7 +10,7 @@ import { QlloaisanphamComponent } from './qlloaisanpham/qlloaisanpham.component'
 import { AuthGuard } from 'src/app/lib/auth.guard';
 import { SanphamsaphetComponent } from './sanphamsaphet/sanphamsaphet.component';
 import { SanphamhetComponent } from './sanphamhet/sanphamhet.component';
-import { SanphamtonkhoComponent } from './sanphamtonkho/sanphamtonkho.component';
+
 import { JwPaginationModule } from 'jw-angular-pagination';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { FormsModule } from '@angular/forms';
@@ -43,7 +43,7 @@ const appreouter : Routes =[
 
 
 @NgModule({
-  declarations: [MainadminComponent, QlsanphamComponent, QlloaisanphamComponent, SanphamsaphetComponent, SanphamhetComponent, SanphamtonkhoComponent, ThongkeComponent],
+  declarations: [MainadminComponent, QlsanphamComponent, QlloaisanphamComponent, SanphamsaphetComponent, SanphamhetComponent,  ThongkeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(appreouter),

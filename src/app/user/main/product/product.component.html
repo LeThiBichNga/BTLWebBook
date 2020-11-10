@@ -99,20 +99,14 @@
                                             </tbody>
                                         </table>
                                     </form> -->
-                                    <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick View</a>
+                                 
                                     <div class="group-button">
-                                        <div class="yith-wcwl-add-to-wishlist">
-                                            <div class="yith-wcwl-add-button show">
-                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                            </div>
-                                        </div>
                                         <div class="kreen product compare-button">
-                                            <a href="#" class="compare button">Compare</a>
+                                            <a href="#" class="compare button">đối chiếu</a>
                                         </div>
-                                        <a href="#" class="button yith-wcqv-button">Quick View</a>
+                                        <a href="#" class="button yith-wcqv-button" [routerLink] = "['/chitietsanpham',it.masp]">xem chi tiết</a>
                                         <div class="add-to-cart">
-                                            <a href="#" class="button product_type_variable add_to_cart_button">Select
-                                                options</a>
+                                            <a href="javascript:void(0)" (click)="addcart(it)" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Thêm vào giỏ hàng</a>
                                         </div>
                                     </div>
                                 </div>

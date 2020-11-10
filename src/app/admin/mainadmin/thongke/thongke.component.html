@@ -15,9 +15,9 @@
           <div class="row align-items-center">
             <div class="col mr-2">
               <div class="text-xs font-weight-bold text-uppercase mb-1">THU NHẬP (HÀNG THÁNG</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{sotien}}</div>
               <div class="mt-2 mb-0 text-muted text-xs">
-                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> </span>
                 <span>kể từ tháng trước</span>
               </div>
             </div>
@@ -35,10 +35,10 @@
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
               <div class="text-xs font-weight-bold text-uppercase mb-1">BÁN HÀNG</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">650</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{donhang.length}}</div>
               <div class="mt-2 mb-0 text-muted text-xs">
-                <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
-                <span>kể từ năm trước</span>
+                <span class="text-success mr-2"><i class="fas fa-arrow-up"></i></span>
+                <span>kể từ tháng trước</span>
               </div>
             </div>
             <div class="col-auto">
@@ -54,10 +54,10 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-uppercase mb-1">KHÁCH HÀNG MỚI</div>
-              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">366</div>
+              <div class="text-xs font-weight-bold text-uppercase mb-1">KHÁCH HÀNG</div>
+              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{khachhang.length}}</div>
               <div class="mt-2 mb-0 text-muted text-xs">
-                <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 20.4%</span>
+                <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> </span>
                 <span>kể từ tháng trước</span>
               </div>
             </div>
@@ -74,11 +74,11 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-uppercase mb-1">YÊU CÂU ĐANG ĐỢI GIẢI QUYÊT</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+              <div class="text-xs font-weight-bold text-uppercase mb-1">SẢN PHẨM</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{sanpham.length}}</div>
               <div class="mt-2 mb-0 text-muted text-xs">
-                <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
-                <span>kể từ hôm qua</span>
+                <span class="text-danger mr-2"> </span>
+                <span>Tổng sản phẩm</span>
               </div>
             </div>
             <div class="col-auto">
@@ -89,7 +89,7 @@
       </div>
     </div>
 <!-- Invoice Example -->
-<div class="col-xl-8 col-lg-7 mb-4">
+<div class="col-lg-12">
   <div class="card">
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
       <h6 class="m-0 font-weight-bold text-primary">Sản phẩm tồn kho</h6>
@@ -130,39 +130,7 @@
     </div>
     <div class="card-footer"></div>
   </div>
-  <div class="card">
-    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-      <h6 class="m-0 font-weight-bold text-primary">Sản phẩm hết</h6>
-      <a class="m-0 float-right btn btn-danger btn-sm" href="#">Xem thêm <i
-          class="fas fa-chevron-right"></i></a>
-    </div>
-    <div class="table-responsive">
-      <table class="table align-items-center table-flush">
-        <thead class="thead-light">
-          <tr>
-            <th>Tên sản phẩm</th>
-            <th>Tác giả</th>
-            <th>Gía</th>
-            <th>Số lượng</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let it of het">
-            <td><a href="#">{{it.tensp}}</a></td>
-            <td>{{it.tacgia}}</td>
-            <td>{{it.gia}}</td>
-            <td>{{it.soluong}}</td>
-          </tr>
-          <ng-container *ngIf="het.length == 0">
-            <tr>
-              <td colspan="4" class="text-center">Danh sách rỗng</td>
-            </tr>
-          </ng-container>   
-        </tbody>
-      </table>
-    </div>
-    <div class="card-footer"></div>
-  </div>
+ 
   <div class="card">
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
       <h6 class="m-0 font-weight-bold text-primary">Sản phẩm sắp hết</h6>
@@ -196,10 +164,43 @@
     </div>
     <div class="card-footer"></div>
   </div>
+  <div class="card">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h6 class="m-0 font-weight-bold text-primary">Sản phẩm hết</h6>
+      <a class="m-0 float-right btn btn-danger btn-sm" href="#">Xem thêm <i
+          class="fas fa-chevron-right"></i></a>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+          <tr>
+            <th>Tên sản phẩm</th>
+            <th>Tác giả</th>
+            <th>Gía</th>
+            <th>Số lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let it of het">
+            <td><a href="#">{{it.tensp}}</a></td>
+            <td>{{it.tacgia}}</td>
+            <td>{{it.gia}}</td>
+            <td>{{it.soluong}}</td>
+          </tr>
+          <ng-container *ngIf="het.length == 0">
+            <tr>
+              <td colspan="4" class="text-center">Danh sách rỗng</td>
+            </tr>
+          </ng-container>   
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer"></div>
+  </div>
 </div>
     
     <!-- Pie Chart -->
-    <div class="col-xl-4 col-lg-5">
+    <!-- <div class="col-xl-4 col-lg-5">
       <div class="card mb-4">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-0 font-weight-bold text-primary">Sản phẩm đã bán</h6>
@@ -270,7 +271,7 @@
               class="fas fa-chevron-right"></i></a>
         </div>
       </div>
-    </div>
+    </div> -->
     
     
   </div>
