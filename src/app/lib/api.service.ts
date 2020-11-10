@@ -30,7 +30,43 @@ export class ApiService {
         })
       );
   }
-
+  put(url: string, obj: any) {
+    const body = JSON.stringify(obj);
+    let cloneHeader: any = {};
+    cloneHeader['Content-Type'] = 'application/json';
+    const headerOptions = new HttpHeaders(cloneHeader);
+    return this._http
+      .put<any>(this.host + url, body, { headers: headerOptions })
+      .pipe(
+        map((res: any) => {
+          let json = res;
+          return json;
+        })
+      )
+      .pipe(
+        catchError((err: Response) => {
+          return this.handleError(err);
+        })
+      );
+  }
+  delete(url: string) {
+    let cloneHeader: any = {};
+    cloneHeader['Content-Type'] = 'application/json';
+    const headerOptions = new HttpHeaders(cloneHeader);
+    return this._http
+      .delete<any>(this.host + url, { headers: headerOptions })
+      .pipe(
+        map((res: any) => {
+          let json = res;
+          return json;
+        })
+      )
+      .pipe(
+        catchError((err: Response) => {
+          return this.handleError(err);
+        })
+      );
+  }
   get(url: string) {
     let cloneHeader: any = {};
     cloneHeader['Content-Type'] = 'application/json';

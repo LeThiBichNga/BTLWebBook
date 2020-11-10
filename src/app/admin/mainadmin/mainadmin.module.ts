@@ -12,6 +12,8 @@ import { SanphamsaphetComponent } from './sanphamsaphet/sanphamsaphet.component'
 import { SanphamhetComponent } from './sanphamhet/sanphamhet.component';
 import { SanphamtonkhoComponent } from './sanphamtonkho/sanphamtonkho.component';
 import { JwPaginationModule } from 'jw-angular-pagination';
+import { CKEditorModule } from 'ng2-ckeditor';
+import { FormsModule } from '@angular/forms';
 
 const appreouter : Routes =[
   {
@@ -46,7 +48,9 @@ const appreouter : Routes =[
     CommonModule,
     RouterModule.forChild(appreouter),
     ShareadminModule,
-    JwPaginationModule
+    JwPaginationModule,
+    CKEditorModule,
+    FormsModule
   ]
 })
 export class MainadminModule { }
