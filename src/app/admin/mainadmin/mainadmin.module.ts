@@ -13,6 +13,7 @@ import { SanphamhetComponent } from './sanphamhet/sanphamhet.component';
 import { JwPaginationModule } from 'jw-angular-pagination';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { FormsModule } from '@angular/forms';
+import { TintucComponent } from './tintuc/tintuc.component';
 
 
 const appreouter : Routes =[
@@ -31,6 +32,10 @@ const appreouter : Routes =[
       {
         path: 'sanpham',
         component: QlsanphamComponent
+      },
+      {
+        path: 'tintuc',
+        component: TintucComponent
       }
     ],
     canActivate:[AuthGuard]
@@ -43,7 +48,7 @@ const appreouter : Routes =[
 
 
 @NgModule({
-  declarations: [MainadminComponent, QlsanphamComponent,  SanphamsaphetComponent, SanphamhetComponent,  ThongkeComponent],
+  declarations: [MainadminComponent, QlsanphamComponent,  SanphamsaphetComponent, SanphamhetComponent,  ThongkeComponent, TintucComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(appreouter),
