@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { MainadminComponent } from './mainadmin.component';
 import {Routes, RouterModule} from '@angular/router';
 import { QlsanphamComponent } from './qlsanpham/qlsanpham.component';
-import { QlloaisanphamComponent } from './qlloaisanpham/qlloaisanpham.component';
 import { AuthGuard } from 'src/app/lib/auth.guard';
 import { SanphamsaphetComponent } from './sanphamsaphet/sanphamsaphet.component';
 import { SanphamhetComponent } from './sanphamhet/sanphamhet.component';
@@ -43,7 +42,7 @@ const appreouter : Routes =[
 
 
 @NgModule({
-  declarations: [MainadminComponent, QlsanphamComponent, QlloaisanphamComponent, SanphamsaphetComponent, SanphamhetComponent,  ThongkeComponent],
+  declarations: [MainadminComponent, QlsanphamComponent,  SanphamsaphetComponent, SanphamhetComponent,  ThongkeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(appreouter),
