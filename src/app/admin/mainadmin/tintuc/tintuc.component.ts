@@ -12,6 +12,7 @@ export class TintucComponent extends BaseComponent implements OnInit {
   tieude:any;
   tomtat:any;
   noidung:any;
+  ngaydang:any;
   id:any;
   constructor(private injector:Injector) {
     super(injector);
@@ -37,17 +38,19 @@ export class TintucComponent extends BaseComponent implements OnInit {
     this.tieude="";
     this.tomtat="";
     this.noidung ="";
+    this.ngaydang="";
   }
   singer_tt:any;
   update(id){
     this.create = false;
-    this._api.get("get_chitiettintuc_by_id/"+id).subscribe(res=>{
+    this._api.get("api/tintuc/get_chitiettintuc_by_id/"+id).subscribe(res=>{
       this.singer_tt = res;
       console.log(this.singer_tt);
       this.tieude=this.singer_tt.tieude;
       this.tomtat=this.singer_tt.tomtat;
       this.noidung =this.singer_tt.noidung;
-      this.id = this.singer_tt.masp;
+      this.ngaydang =this.singer_tt.ngaydang;
+      this.id = this.singer_tt.matt;
     });
   }
   delete_sp(id){
@@ -63,7 +66,7 @@ export class TintucComponent extends BaseComponent implements OnInit {
       }
     });
   }
-  getdata(tieude,tomtat,noidung){
+  getdata(tieude,tomtat,noidung,ngaydang){
     var nd = CKEDITOR.instances.content.getData();  
     this.getEncodeFromImage(this.ha).subscribe(res=>{
       var fromdate = {
@@ -71,6 +74,7 @@ export class TintucComponent extends BaseComponent implements OnInit {
         hinhanh: res,
         tomtat: parseInt(tomtat),
         noidung: noidung,
+        ngaydang:ngaydang,
       
       }
       if(this.create){

@@ -32,11 +32,14 @@
               <label for="exampleFormControlFile1">Nội dung</label>
               <ckeditor [(ngModel)]="noidung" #myEditor [config]="{uiColor: '#a4a4a4'}" debounce="500"> </ckeditor>
             </div>  
-             
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Ngày đăng</label>
+                <input [(ngModel)]="ngaydang" #tensp type="text" class="form-control" id="exampleFormControlInput1">
+              </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-            <button type="button" (click)="getdata(tieude.value,tomtat.value,noidung.value)" class="btn btn-primary">Lưu</button>
+            <button type="button" (click)="getdata(tieude.value,tomtat.value,noidung.value,ngaydang.value)" class="btn btn-primary">Lưu</button>
           </div>
         </div>
       </div>
