@@ -14,6 +14,7 @@ import { JwPaginationModule } from 'jw-angular-pagination';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { FormsModule } from '@angular/forms';
 
+
 const appreouter : Routes =[
   {
     path:'',

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {Routes, RouterModule} from '@angular/router';
 
 
+
 const appreouter : Routes =[
   {
     path:'',
@@ -18,7 +19,8 @@ const appreouter : Routes =[
 ]
 @NgModule({
   declarations: [
-    AppComponent   
+    AppComponent,
+     
   ],
   imports: [
     BrowserModule,
