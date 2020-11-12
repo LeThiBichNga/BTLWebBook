@@ -29,7 +29,15 @@ export class SearchComponent extends BaseComponent implements OnInit {
       }, err => { });       
     });
   }
-  
+  changepaize(i){
+    console.log(this.search);
+    var index = this.pageSize*(i-1);
+    this._api.post('api/sanpham/get_san_pham_search', { page: i, pageSize: this.pageSize, search: this.search}).subscribe(res => {
+      this.item = res.data;
+      console.log(this.item);
+      this.totalItems = res.totalItems;
+    });
+  }
   phantrang(){
     var listtotal = [];
     var nava = parseInt((this.totalItems / this.pageSize).toFixed());
