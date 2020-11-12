@@ -24,10 +24,12 @@ export class ShoppingcartComponent extends BaseComponent implements OnInit {
   }
   clearCart() { 
     this._cart.clearCart();
+  
     alert('Xóa thành công');
   }
   deleteCart(id){
     this._cart.deleteItem(id);
+    // xóa sản phẩm theo id ,sẽ thông báo xóa thành công
     alert("Xóa thành công")
   }
   addQty(item, quantity){ 

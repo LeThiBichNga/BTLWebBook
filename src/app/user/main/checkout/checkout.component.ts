@@ -41,8 +41,10 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
     this.http.post("https://localhost:44374/api/hoadon/Dat_Hang",formdata).subscribe(res=>{
       if(res){
         alert("Đặt hàng thành công");
-        this._cart.clearCart();
+        this._cart.clearCart(); 
+        //xoa cac bien cart trong   localStorage.removeItem('cart');
         this.rout.navigate(["/trangchu"]);
+    
       }
       else{
         alert("Đặt hàng thất bại");
